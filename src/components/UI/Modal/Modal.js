@@ -5,13 +5,10 @@ import BackDrop from '../Backdrop/Backdrop'
 
 class Modal extends Component {
 
-componentWillUpdate()
-{
-console.log("[Modal.js] - componentWillUpdate" );
-}
+
 
 shouldComponentUpdate(nextProps, nextState) {
-    return this.props.show !== nextProps.show;
+    return this.props.show !== nextProps.show || this.props.children !== nextProps.children;
 }
  
 render() {
