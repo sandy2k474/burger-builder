@@ -18,7 +18,7 @@ const sideDrawer = (props) => {
 
      <Aux>
 
-         <BackDrop clicked={props.closed}/>
+         {props.show ? <BackDrop clicked={props.closed}/> : null}
          
          {console.log("SideDrawer classes: " ,sideDrawerClasses.join(' '))}
 
